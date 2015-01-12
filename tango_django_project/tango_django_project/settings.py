@@ -1,4 +1,10 @@
 # Django settings for tango_django_project project.
+import os
+SETTINGS_DIR = os.path.dirname(__file__)
+
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
+PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+TEMPLATE_PATH = os.path.join('/home/local/PALYAM/grashmi/django/python/usr/bin/tango_with_django_project/templates/', 'templates')
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -124,6 +130,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'rango',	 
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
